@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<hr />
+
+<div class="row">
+    <div class="col-sm-4" style="text-align:center">
+    </div>
+    <div class="col-sm-4" style="text-align:center;">
+        <div class="col-md-12">
+            <img src="~/Models/Images/gerb.png" style="width:84px; height:94px;" />
+        </div>
+
+        <a href="~/Home/IndexUz">
+            <strong>
+                Тошкент шаҳар Сергели тумани ҳокими виртуал қабулхонаси
+            </strong>
+        </a>
+
+    </div>
+    <div class="col-sm-4" style="text-align:right   ">
+            <div class="row">
+                <img src="~/Models/Images/flag_uzbekistana.png" onclick="window.location.href='/Home/IndexUz'" style="width:40px; height:20px;" />
+                <img src="~/Models/Images/flag_rossii.png" onclick="window.location.href='/Home/Index'" style="width:40px; height:20px;" />
+            </div>
+        </div>
+</div>
+
+<hr />
+
+<div style="padding-top:2em; padding-bottom:2em; text-align:center">
+    <strong>
+        <var class="h4">
+            Сизда ҳал этилмаган масалалар/муаммолар, ариза, шикоят ёки таклифлар борми?
+            У ҳолда мурожаатингизни тўғридан-тўғри Тошкент шаҳар Сергели тумани ҳокимига юборишингиз мумкин.
+        </var>
+    </strong>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        <div class="panel panel-success">
+            <div class="panel-heading h1"><p class="h3" style="padding-top:0.5em; padding-left:1em;">Сизнинг мурожаатингиз муваффақиятли жўнатилди.</p></div>
+            <div class="panel-body">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group h3">
+                    @Html.Label("Диққат!!! Қуйидаги маълумотларни сақлаб олинг", htmlAttributes: new { @class = "control-label col-md-8" })
+                </div>
+
+                <div class="form-group h4">
+                    @Html.Label("Мурожаат рақами:", htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6" style="padding-top:0.4em;">
+                        @ViewBag.num
+                    </div>
+                </div>
+
+                <div class="form-group h4">
+                    @Html.Label("Мурожаат ҳолатини текшириш коди:", htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6" style="padding-top:0.4em;">
+                        @ViewBag.pas
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+<input type="button" class="btn btn-info" value="Ортга" onclick="window.location.href='/home/indexuz'" />
+
+<hr />
+
+
+

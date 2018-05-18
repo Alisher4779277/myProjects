@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Answer";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+@using (Html.BeginForm("Answer", "Cabinet", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading h1" style="margin-top:0px;"><p class="h3" style="padding-top:0.5em; padding-left:1em;">Мурожаатга жавоб бериш</p></div>
+            <div class="panel-body">
+                <input type="button" class="btn btn-primary" onclick="window.location.href = '/@ViewBag.Url'" value="Орқага" />
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    <div class="control-label col-md-2">
+
+                    </div>
+                    <div class="col-md-10">
+                        <input type="file" name="File">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Мурожаат матни", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextArea("text", htmlAttributes: new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Юбориш" class="btn btn-default btn-primary" style="width:225px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

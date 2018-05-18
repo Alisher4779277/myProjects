@@ -1,0 +1,587 @@
+﻿
+@{
+    ViewBag.Title = "Statistic";
+    Layout = null;
+    int x = 0, y = 0, a = 0;
+    try
+    {
+        x = ViewBag.CloseMonth * 100 / ViewBag.TotalMonth;
+        y = ViewBag.OpenMonth * 100 / ViewBag.TotalMonth;
+        a = ViewBag.NewMonth * 100 / ViewBag.TotalMonth;
+    }
+    catch { }
+}
+    
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal cabinet</title>
+    <link href="~/Content/gentelella-master/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <link href="~/Content/gentelella-master/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/build/css/custom.min.css" rel="stylesheet">
+
+</head>
+<body class="nav-md">
+    
+        <div class="container body">
+            <div class="main_container">
+                <div class="col-md-3 left_col">
+                    <div class="left_col scroll-view">
+                        <div class="navbar nav_title" style="border: 0;">
+                            <a href="Home" class="site_title"><i class="fa fa-university"></i> <span>vazir.edu.uz</span></a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <br />
+                        <div class="profile" style="text-align:center;">
+                            <div class="profile_img" >
+                                <img style="width:130px;height:130px; margin-left:0px;" src="~/Models/Images/gerb.png" alt="..." class="img-circle profile_img">
+                            </div>
+                        </div>
+                        <br />
+                        <!-- sidebar menu -->
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                            <div class="menu_section">
+                                <ul class="nav side-menu">
+                                    <li>
+                                        <a href="/Cabinet/Statistic"><i class="fa fa-bars"></i> Статистика </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Cabinet/OpenRetweetRequests"><i class="fa fa-inbox"></i> Янги мурожаатлар </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Cabinet/CloseCompleteRequests"><i class="fa fa-folder-open"></i> Жавоб берилган мурожаатлар </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Cabinet/CloseRequestsForOthers"><i class="fa fa-archive"></i> Ёпиқ мурожаатлар </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /sidebar menu -->
+                    </div>
+                </div>
+                <!-- top navigation -->
+                <div class="top_nav">
+                    <div class="nav_menu">
+                        <nav>
+                            <div class="nav toggle">
+                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                            </div>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="">
+                                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="width:220px; text-align:center;">
+                                        Шахсий кабинет
+                                        <span class="fa fa-angle-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                        <li><a href="/Cabinet/ChangePassword"><i class="fa fa-recycle pull-right"></i> Паролни ўзгартириш</a></li>
+                                        <li><a href="/Cabinet/Exit"><i class="fa fa-sign-out pull-right"></i> Чиқиш</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /top navigation -->
+                <!-- page content -->
+                <div class="right_col" role="main">
+                    <br />
+                    <br />
+                    <br />
+                    <!-- top tiles -->
+                    <div class="row tile_count">
+                        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                            <span class="count_top"><i class="fa fa-list"></i> Жами мурожаатлар</span>
+                            <div class="count blue">@ViewBag.Total</div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                            <span class="count_top"><i class="fa fa-inbox"></i> Янги мурожаатлар</span>
+                            <div class="count purple">@ViewBag.New</div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                            <span class="count_top"><i class="fa fa-folder-open"></i> Жавоб берилган мурожаатлар</span>
+                            <div class="count red">@ViewBag.Open</div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                            <span class="count_top"><i class="fa fa-archive"></i> Ёпиқ мурожаатлар</span>
+                            <div class="count green">@ViewBag.Close</div>
+                        </div>
+                    </div>
+                    <!-- /top tiles -->
+                    <div class="row">
+                        <div class="row col-md-8">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="dashboard_graph">
+                                    <div class="row x_title">
+                                        <div class="col-md-6">
+                                            <h3>1 хафталик мурожаатлар</h3>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div id="placeholder33" style="height: 260px; display: none" class="demo-placeholder"></div>
+                                        <div style="width: 100%;">
+                                            <div id="canvas_dahs" class="demo-placeholder" style="width: 100%; height:270px;"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <br />
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="x_panel tile fixed_height_320">
+                                    <div class="x_title">
+                                        <h2>1 ойлик мурожаатлар</h2>
+
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div class="widget_summary">
+                                            <div class="w_left w_25">
+                                                <span>Келиб тушган</span>
+                                            </div>
+                                            <div class="w_center w_55">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                                        <span class="sr-only">60% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="w_right w_20">
+                                                <span>@ViewBag.TotalMonth</span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="widget_summary">
+                                            <div class="w_left w_25">
+                                                <span>Ёпилган</span>
+                                            </div>
+                                            <div class="w_center w_55">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: @x%;">
+                                                        <span class="sr-only">60% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="w_right w_20">
+                                                <span>@ViewBag.CloseMonth</span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="widget_summary">
+                                            <div class="w_left w_25">
+                                                <span>Жавоб берилган</span>
+                                            </div>
+                                            <div class="w_center w_55">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-red" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: @y%;">
+                                                        <span class="sr-only">60% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="w_right w_20">
+                                                <span>@ViewBag.OpenMonth</span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="widget_summary">
+                                            <div class="w_left w_25">
+                                                <span>Жараёнда</span>
+                                            </div>
+                                            <div class="w_center w_55">
+                                                <div class="progress">
+                                                    <div class="progress-bar purple" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: @a%;">
+                                                        <span class="sr-only">60% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="w_right w_20">
+                                                <span>@ViewBag.NewMonth</span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="x_panel tile fixed_height_320 overflow_hidden">
+                                    <div class="x_title">
+                                        <h2>Мурожаатлар (фоизда)</h2>
+
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <table class="" style="width:100%">
+
+                                            <tr>
+                                                <td>
+                                                    <canvas id="canvas1" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
+                                                </td>
+                                                <td>
+                                                    <table class="tile_info">
+                                                        <tr>
+                                                            <td>
+                                                                <p><i class="fa fa-square purple"></i>Келиб тушган </p>
+                                                            </td>
+                                                            <td>@ViewBag.NewProcent%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p><i class="fa fa-square red"></i>Жавоб берилган </p>
+                                                            </td>
+                                                            <td>@ViewBag.OpenProcent%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p><i class="fa fa-square green"></i>Ёпилган </p>
+                                                            </td>
+                                                            <td>@ViewBag.CloseProcent%</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="x_panel tile overflow_hidden">
+                                <div class="x_title">
+                                    <h2>Умумий статистика</h2>
+
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <table class="table table-bordered" style="width:100%">
+                                        <tr>
+                                            <td rowspan="4" style="text-align:center; vertical-align:middle;">
+                                                Умумий статистика
+                                            </td>
+                                            <td>
+                                                Жами мурожаатлар
+                                            </td>
+                                            <td>
+                                                @ViewBag.Total
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Янги
+                                            </td>
+                                            <td>
+                                                <a href="/Cabinet/IndexNew">
+                                                    @ViewBag.New
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Очиқ
+                                            </td>
+                                            <td>
+                                                <a href="/Cabinet/IndexOld">
+                                                    @ViewBag.Open
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Ёпиқ
+                                            </td>
+                                            <td>
+                                                <a href="/Cabinet/IndexClosed">
+                                                    @ViewBag.Close
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" style="text-align:center; vertical-align:middle;">
+                                                Муддати яқинлашаётган мурожаатлар
+                                            </td>
+                                            <td>
+                                                1 кун қолган
+                                            </td>
+                                            <td>
+                                                <a href="/Cabinet/Soon1">
+                                                    @ViewBag.DateSoon1
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                1 - 3 кун қолган
+                                            </td>
+                                            <td>
+                                                <a href="/Cabinet/Soon1_3">
+                                                    @ViewBag.DateSoon3
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                4 - 7 кун қолган
+                                            </td>
+                                            <td>
+                                                <a href="/Cabinet/Soon4_7">
+                                                    @ViewBag.DateSoon5
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="5" style="text-align:center; vertical-align:middle;">
+                                                Муддати ўтган мурожаатлар
+                                            </td>
+                                            <td>
+                                                Жами мурожаатлар
+                                            </td>
+                                            <td>
+                                                <a href="/Cabinet/TotalExpired">
+                                                    @ViewBag.DateOutTotal
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                1 - 3 кун қолган
+                                            </td>
+                                            <td>
+                                                <a href="/Cabinet/Expired1_3">
+                                                    @ViewBag.DateOut3
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                3 - 5 кун қолган
+                                            </td>
+                                            <td>
+                                                <a href="/Cabinet/Expired3_5">
+                                                    @ViewBag.DateOut5
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                5 - 10 кун қолган
+                                            </td>
+                                            <td>
+                                                <a href="/Cabinet/Expired5_10">
+                                                    @ViewBag.DateOut10
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                10 кундан ошиқ
+                                            </td>
+                                            <td>
+                                                <a href="/Cabinet/Expired10_">
+                                                    @ViewBag.DateOut15
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+                <!-- /page content -->
+                <!-- footer content -->
+                <footer>
+                    <div class="pull-right">
+                        TMETJEM
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
+            </div>
+        </div>
+
+    <!-- jQuery -->
+    <script src="~/Content/gentelella-master/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Content/gentelella-master/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Content/gentelella-master/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="~/Content/gentelella-master/vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="~/Content/gentelella-master/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="~/Content/gentelella-master/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="~/Content/gentelella-master/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/Content/gentelella-master/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="~/Content/gentelella-master/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.js"></script>
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="~/Content/gentelella-master/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="~/Content/gentelella-master/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="~/Content/gentelella-master/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="~/Content/gentelella-master/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="~/Content/gentelella-master/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="~/Content/gentelella-master/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="~/Content/gentelella-master/vendors/moment/min/moment.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="~/Content/gentelella-master/build/js/custom.min.js"></script>
+
+</body>
+</html>
+
+
+
+<!-- Flot -->
+<script type="text/javascript">
+      $(document).ready(function() {
+        var data1 = [
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 7), @ViewBag.monday],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 6), @ViewBag.tuesday],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 5), @ViewBag.wednesday],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 4), @ViewBag.touthday],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 3), @ViewBag.friday],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 2), @ViewBag.saturday],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 1), @ViewBag.sunday],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day), @ViewBag.today],
+        ];
+
+          var data2 = [
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 7), @ViewBag.monday1],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 6), @ViewBag.tuesday1],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 5), @ViewBag.wednesday1],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 4), @ViewBag.touthday1],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 3), @ViewBag.friday1],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 2), @ViewBag.saturday1],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day - 1), @ViewBag.sunday1],
+          [gd(@DateTime.Now.Year, @DateTime.Now.Month, @DateTime.Now.Day), @ViewBag.today1],
+          ];
+
+
+        $("#canvas_dahs").length && $.plot($("#canvas_dahs"), [
+          data1, data2
+        ], {
+          series: {
+            lines: {
+              show: false,
+              fill: true
+            },
+            splines: {
+              show: true,
+              tension: 0.4,
+              lineWidth: 1,
+              fill: 0.4
+            },
+            points: {
+              radius: 0,
+              show: true
+            },
+            shadowSize: 2
+          },
+          grid: {
+            verticalLines: true,
+            hoverable: true,
+            clickable: true,
+            tickColor: "#d5d5d5",
+            borderWidth: 1,
+            color: '#fff'
+          },
+          colors: ["rgba(231, 88, 106, 0.38)", "rgba(38, 185, 154, 0.38)" ],
+          xaxis: {
+            tickColor: "rgba(51, 51, 51, 0.06)",
+            mode: "time",
+            tickSize: [1, "day"],
+            //tickLength: 10,
+            axisLabel: "Date",
+            axisLabelUseCanvas: true,
+            axisLabelFontSizePixels: 12,
+            axisLabelFontFamily: 'Verdana, Arial',
+            axisLabelPadding: 10
+          },
+          yaxis: {
+            ticks: 8,
+            tickColor: "rgba(51, 51, 51, 0.06)",
+          },
+          tooltip: false
+        });
+
+        function gd(year, month, day) {
+          return new Date(year, month - 1, day).getTime();
+        }
+      });
+</script>
+<!-- /Flot -->
+<!-- Doughnut Chart -->
+<script type="text/javascript">
+      $(document).ready(function(){
+        var options = {
+          legend: false,
+          responsive: false
+        };
+
+        new Chart(document.getElementById("canvas1"), {
+          type: 'doughnut',
+          tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+          data: {
+            labels: [
+              "Новые",
+              "Открытые",
+              "Закрытые",
+              "Перенаправленные",
+              "Треб. подтв."
+            ],
+            datasets: [{
+                data: [@ViewBag.NewProcent, @ViewBag.OpenProcent, @ViewBag.CloseProcent, @ViewBag.RetweetProcent, @ViewBag.CompleteProcent],
+              backgroundColor: [
+
+                "#9B59B6",
+                "#E74C3C",
+                "#26B99A",
+                "#BDC3C7",
+
+              ],
+              hoverBackgroundColor: [
+
+                "#B370CF",
+                "#E95E4F",
+                "#36CAAB",
+                "#CFD4D8",
+              ]
+            }]
+          },
+          options: options
+        });
+      });
+</script>
+<!-- /Doughnut Chart -->

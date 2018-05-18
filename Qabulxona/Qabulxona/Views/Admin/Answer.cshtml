@@ -1,0 +1,66 @@
+﻿
+<div class="col-md-11">
+</div>
+<div class="col-md-12" style="padding-bottom:2em;">
+    <input type="button" class="btn btn-danger" value="Выход" onclick="window.location.href='/admin/exit'" />
+</div>
+
+<hr />
+
+<div class="row" style="padding-bottom:2em;">
+    <div class="col-sm-4" style="padding-right:0em; padding-left:17em;">
+        <img src="~/Models/Images/vazir.jpg" class="img-thumbnail" style="width:116px; height:139px;" />
+    </div>
+    <div class="col-sm-4" style="padding-left:0em; padding-right:0em; padding-top:2em;">
+        <a href="~/Home/Index">
+            <strong>
+                Виртуальная приемная министра Высшего и среднего специального образования Республики Узбекистан
+            </strong>
+        </a>
+        <h3>Касимова Рустама Сабировича</h3>
+    </div>
+    <div class="col-sm-2" style="padding-left:1em;">
+        <img src="~/Models/Images/gerb.png" style="width:124px; height:134px;" />
+    </div>
+</div>
+
+<hr />
+
+@using (Html.BeginForm("Answer", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading h1"><p class="h3" style="padding-top:0.5em; padding-left:1em;">Ответ на обращение</p></div>
+            <div class="panel-body">
+                <input type="button" class="btn btn-primary" onclick="window.location.href = '/Admin/IndexNew'" value="Назад в список" />
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.Label("Выберите файл", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <span class="btn btn-primary btn-file">
+                            Загрузить <input type="file" name="File">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Текст обращения", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextArea("text", htmlAttributes: new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Отправить" class="btn btn-default btn-primary" style="width:225px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

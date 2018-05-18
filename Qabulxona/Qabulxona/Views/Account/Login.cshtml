@@ -1,0 +1,60 @@
+﻿@using Qabulxona.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Выполнить вход";
+}
+
+<div class="row" style="margin-top:100px; margin-bottom:240px;">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <section id="loginForm">
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                <div class="form-group">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8" style="text-align:center;">
+                        <img src="~/Models/Images/gerb.png" style="width:124px; height:134px;" />
+                    </div>
+                </div>
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group" style="margin-top:50px;">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Логин" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Пароль" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <img src='@Url.Action("Captcha", "Home")' alt='captcha' />
+                            @Html.TextBoxFor(m => m.Captcha, new { @class = "form-control", @placeholder = "Расмдаги рақамларни киритинг" })
+                            @Html.ValidationMessageFor(m => m.Captcha, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group" style="margin-top:50px; margin-bottom:50px;">
+                        <div class="col-md-offset-2 col-md-8">
+                            <input type="submit" value="Тизимга кириш" class="btn btn-primary" style="width:350px;" />
+                        </div>
+                    </div>
+                    }
+</section>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

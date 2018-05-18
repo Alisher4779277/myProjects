@@ -1,0 +1,156 @@
+﻿@model Qabulxona.Models.Requests
+
+<div class="col-md-11">
+</div>
+<div class="col-md-12" style="padding-bottom:2em;">
+    <input type="button" class="btn btn-danger" value="Выход" onclick="window.location.href='/admin/exit'" />
+</div>
+
+<hr />
+
+<div class="row" style="padding-bottom:2em;">
+    <div class="col-sm-4" style="padding-right:0em; padding-left:17em;">
+        <img src="~/Models/Images/vazir.jpg" class="img-thumbnail" style="width:116px; height:139px;" />
+    </div>
+    <div class="col-sm-4" style="padding-left:0em; padding-right:0em; padding-top:2em;">
+        <a href="~/Home/Index">
+            <strong>
+                Виртуальная приемная министра Высшего и среднего специального образования Республики Узбекистан
+            </strong>
+        </a>
+        <h3>Касимова Рустама Сабировича</h3>
+    </div>
+    <div class="col-sm-2" style="padding-left:1em;">
+        <img src="~/Models/Images/gerb.png" style="width:124px; height:134px;" />
+    </div>
+</div>
+
+<hr />
+
+<div class="panel panel-primary">
+    <div class="panel-heading h1"><p class="h3" style="padding-top:0.5em; padding-left:1em;">Детали обращения</p></div>
+    <div class="panel-body">
+        <div>
+            <input type="button" class="btn btn-primary" onclick="window.location.href = '/Admin/IndexNew'" value="Назад в список"/>
+            <hr />
+            <dl class="dl-horizontal h4">
+                <dt>
+                    @Html.DisplayName("ФИО")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Регион")
+                </dt>
+
+                <dd>
+                    @ViewBag.Region
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Район (город)")
+                </dt>
+
+                <dd>
+                    @ViewBag.Area
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Адрес")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Adress)
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Электронная почта")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Телефон")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Phone)
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Пол")
+                </dt>
+
+                <dd>
+                    @ViewBag.Sex
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Год рождения")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.YearOfBirth)
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Файл")
+                </dt>
+
+                <dd>
+                    <a href="~/Models/Files/@ViewBag.FileName">@ViewBag.FileName</a>
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Тема")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RequestSubject)
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Обращение")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Text)
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Номер обращения")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RequestNumber)
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Код обращения")
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RequestPassword)
+                </dd>
+
+                <dt>
+                    @Html.DisplayName("Статус")
+                </dt>
+
+                <dd>
+                    @ViewBag.Status
+                </dd>
+
+            </dl>
+        </div>
+        <button class="col-lg-offset-2 btn btn-default">
+            @Html.ActionLink("Дать ответ", "Answer", new { id = Model.RequestId })
+        </button>
+
+    </div>
+</div>

@@ -1,0 +1,490 @@
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\ApplicationInsights.config
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\roslyn\csc.exe
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\roslyn\System.Collections.Immutable.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\roslyn\vbc.exe
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\roslyn\VBCSCompiler.exe
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\roslyn\VBCSCompiler.exe.config
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Qabulxona.dll.config
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Qabulxona.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Qabulxona.pdb
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Antlr3.Runtime.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\EntityFramework.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\EntityFramework.SqlServer.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AI.Web.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AI.WindowsServer.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.ApplicationInsights.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Google.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Web.Infrastructure.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Newtonsoft.Json.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Owin.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.Helpers.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.Mvc.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.Optimization.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.Razor.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.WebPages.Deployment.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.WebPages.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.WebPages.Razor.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\WebGrease.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AI.Web.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AI.WindowsServer.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.ApplicationInsights.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.Helpers.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.Mvc.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.Optimization.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.Razor.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.WebPages.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.WebPages.Deployment.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\System.Web.WebPages.Razor.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Antlr3.Runtime.pdb
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Newtonsoft.Json.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\EntityFramework.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\EntityFramework.SqlServer.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Google.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\obj\Debug\Qabulxona.dll
+c:\users\j.rahmanov\documents\visual studio 2015\Projects\Qabulxona\Qabulxona\obj\Debug\Qabulxona.pdb
+C:\Users\j.rahmanov\Documents\Visual Studio 2015\Projects\Qabulxona\Qabulxona\obj\Debug\Qabulxona.csprojResolveAssemblyReference.cache
+E:\Qabulxona\Qabulxona\bin\ApplicationInsights.config
+E:\Qabulxona\Qabulxona\bin\roslyn\csc.exe
+E:\Qabulxona\Qabulxona\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Qabulxona\Qabulxona\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Qabulxona\Qabulxona\bin\roslyn\System.Collections.Immutable.dll
+E:\Qabulxona\Qabulxona\bin\roslyn\System.Reflection.Metadata.dll
+E:\Qabulxona\Qabulxona\bin\roslyn\vbc.exe
+E:\Qabulxona\Qabulxona\bin\roslyn\VBCSCompiler.exe
+E:\Qabulxona\Qabulxona\bin\roslyn\VBCSCompiler.exe.config
+E:\Qabulxona\Qabulxona\bin\Qabulxona.dll.config
+E:\Qabulxona\Qabulxona\bin\Qabulxona.dll
+E:\Qabulxona\Qabulxona\bin\Qabulxona.pdb
+E:\Qabulxona\Qabulxona\bin\Antlr3.Runtime.dll
+E:\Qabulxona\Qabulxona\bin\EntityFramework.dll
+E:\Qabulxona\Qabulxona\bin\EntityFramework.SqlServer.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.AI.DependencyCollector.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.AI.Web.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.AI.WindowsServer.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.ApplicationInsights.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Google.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.Web.Infrastructure.dll
+E:\Qabulxona\Qabulxona\bin\Newtonsoft.Json.dll
+E:\Qabulxona\Qabulxona\bin\Owin.dll
+E:\Qabulxona\Qabulxona\bin\System.Web.Helpers.dll
+E:\Qabulxona\Qabulxona\bin\System.Web.Mvc.dll
+E:\Qabulxona\Qabulxona\bin\System.Web.Optimization.dll
+E:\Qabulxona\Qabulxona\bin\System.Web.Razor.dll
+E:\Qabulxona\Qabulxona\bin\System.Web.WebPages.Deployment.dll
+E:\Qabulxona\Qabulxona\bin\System.Web.WebPages.dll
+E:\Qabulxona\Qabulxona\bin\System.Web.WebPages.Razor.dll
+E:\Qabulxona\Qabulxona\bin\WebGrease.dll
+E:\Qabulxona\Qabulxona\bin\Microsoft.AI.DependencyCollector.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.AI.Web.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.AI.WindowsServer.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.ApplicationInsights.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Qabulxona\Qabulxona\bin\System.Web.Helpers.xml
+E:\Qabulxona\Qabulxona\bin\System.Web.Mvc.xml
+E:\Qabulxona\Qabulxona\bin\System.Web.Optimization.xml
+E:\Qabulxona\Qabulxona\bin\System.Web.Razor.xml
+E:\Qabulxona\Qabulxona\bin\System.Web.WebPages.xml
+E:\Qabulxona\Qabulxona\bin\System.Web.WebPages.Deployment.xml
+E:\Qabulxona\Qabulxona\bin\System.Web.WebPages.Razor.xml
+E:\Qabulxona\Qabulxona\bin\Antlr3.Runtime.pdb
+E:\Qabulxona\Qabulxona\bin\Newtonsoft.Json.xml
+E:\Qabulxona\Qabulxona\bin\EntityFramework.xml
+E:\Qabulxona\Qabulxona\bin\EntityFramework.SqlServer.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Google.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Qabulxona\Qabulxona\obj\Debug\Qabulxona.csprojResolveAssemblyReference.cache
+E:\Qabulxona\Qabulxona\obj\Debug\Qabulxona.dll
+E:\Qabulxona\Qabulxona\obj\Debug\Qabulxona.pdb
+E:\Qabulxona\Qabulxona\bin\Aspose.Words.dll
+E:\Qabulxona\Qabulxona\bin\ru\System.Web.Helpers.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\System.Web.Mvc.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\System.Web.Optimization.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\System.Web.Razor.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\System.Web.WebPages.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\System.Web.WebPages.Deployment.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\System.Web.WebPages.Razor.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\EntityFramework.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\EntityFramework.SqlServer.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+E:\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ApplicationInsights.config
+E:\Visual studio\Qabulxona\Qabulxona\bin\roslyn\csc.exe
+E:\Visual studio\Qabulxona\Qabulxona\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Visual studio\Qabulxona\Qabulxona\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Visual studio\Qabulxona\Qabulxona\bin\roslyn\System.Collections.Immutable.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\roslyn\System.Reflection.Metadata.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\roslyn\vbc.exe
+E:\Visual studio\Qabulxona\Qabulxona\bin\roslyn\VBCSCompiler.exe
+E:\Visual studio\Qabulxona\Qabulxona\bin\roslyn\VBCSCompiler.exe.config
+E:\Visual studio\Qabulxona\Qabulxona\bin\Qabulxona.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Qabulxona.pdb
+E:\Visual studio\Qabulxona\Qabulxona\bin\Antlr3.Runtime.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\EntityFramework.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\EntityFramework.SqlServer.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AI.DependencyCollector.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AI.Web.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AI.WindowsServer.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.ApplicationInsights.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Google.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Web.Infrastructure.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Newtonsoft.Json.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Owin.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.Helpers.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.Mvc.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.Optimization.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.Razor.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.WebPages.Deployment.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.WebPages.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.WebPages.Razor.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\WebGrease.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AI.DependencyCollector.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AI.Web.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AI.WindowsServer.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.ApplicationInsights.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.Helpers.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.Mvc.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.Optimization.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.Razor.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.WebPages.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.WebPages.Deployment.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\System.Web.WebPages.Razor.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Antlr3.Runtime.pdb
+E:\Visual studio\Qabulxona\Qabulxona\bin\Newtonsoft.Json.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\EntityFramework.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\EntityFramework.SqlServer.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Google.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\System.Web.Helpers.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\System.Web.Mvc.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\System.Web.Optimization.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\System.Web.Razor.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\System.Web.WebPages.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\System.Web.WebPages.Deployment.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\System.Web.WebPages.Razor.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\EntityFramework.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\EntityFramework.SqlServer.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+E:\Visual studio\Qabulxona\Qabulxona\obj\Debug\Qabulxona.csprojResolveAssemblyReference.cache
+E:\Visual studio\Qabulxona\Qabulxona\obj\Debug\Qabulxona.dll
+E:\Visual studio\Qabulxona\Qabulxona\obj\Debug\Qabulxona.pdb
+E:\Visual studio\Qabulxona\Qabulxona\bin\Qabulxona.dll.config
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ApplicationInsights.config
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\roslyn\csc.exe
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\roslyn\System.Collections.Immutable.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\roslyn\System.Reflection.Metadata.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\roslyn\vbc.exe
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\roslyn\VBCSCompiler.exe
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\roslyn\VBCSCompiler.exe.config
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Qabulxona.dll.config
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Qabulxona.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Qabulxona.pdb
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Antlr3.Runtime.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\EntityFramework.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\EntityFramework.SqlServer.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AI.Agent.Intercept.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AI.DependencyCollector.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AI.Web.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AI.WindowsServer.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.ApplicationInsights.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Core.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Cookies.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Facebook.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Google.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.OAuth.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Twitter.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Web.Infrastructure.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Newtonsoft.Json.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Owin.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.Helpers.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.Mvc.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.Optimization.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.Razor.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.WebPages.Deployment.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.WebPages.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.WebPages.Razor.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\WebGrease.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AI.DependencyCollector.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AI.Web.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AI.WindowsServer.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.ApplicationInsights.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.Helpers.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.Mvc.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.Optimization.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.Razor.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.WebPages.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.WebPages.Deployment.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\System.Web.WebPages.Razor.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Antlr3.Runtime.pdb
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Newtonsoft.Json.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\EntityFramework.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\EntityFramework.SqlServer.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Core.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Facebook.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Cookies.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.OAuth.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Google.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Twitter.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\System.Web.Helpers.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\System.Web.Mvc.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\System.Web.Optimization.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\System.Web.Razor.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\System.Web.WebPages.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\EntityFramework.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\obj\Debug\Qabulxona.csprojResolveAssemblyReference.cache
+D:\JAVA BEPRO\Qabulxona\Qabulxona\obj\Debug\Qabulxona.dll
+D:\JAVA BEPRO\Qabulxona\Qabulxona\obj\Debug\Qabulxona.pdb
+D:\C#\[Projects]\Qabulxona\Qabulxona\obj\Debug\Qabulxona.csprojResolveAssemblyReference.cache
+D:\C#\[Projects]\Qabulxona\Qabulxona\obj\Debug\Qabulxona.dll
+D:\C#\[Projects]\Qabulxona\Qabulxona\obj\Debug\Qabulxona.pdb
+H:\Projects\Projects C#\Qabulxona\Qabulxona\obj\Debug\Qabulxona.csprojResolveAssemblyReference.cache
+H:\Projects\Projects C#\Qabulxona\Qabulxona\obj\Debug\Qabulxona.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\obj\Debug\Qabulxona.pdb
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ApplicationInsights.config
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\roslyn\csc.exe
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\roslyn\Microsoft.CSharp.Core.targets
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\roslyn\Microsoft.VisualBasic.Core.targets
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\roslyn\System.Collections.Immutable.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\roslyn\System.Reflection.Metadata.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\roslyn\vbc.exe
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\roslyn\VBCSCompiler.exe
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\roslyn\VBCSCompiler.exe.config
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Qabulxona.dll.config
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Qabulxona.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Qabulxona.pdb
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Antlr3.Runtime.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\EntityFramework.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\EntityFramework.SqlServer.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AI.Agent.Intercept.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AI.DependencyCollector.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AI.PerfCounterCollector.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AI.ServerTelemetryChannel.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AI.Web.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AI.WindowsServer.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.ApplicationInsights.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Core.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Owin.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Host.SystemWeb.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Cookies.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Facebook.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Google.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.OAuth.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Twitter.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Web.Infrastructure.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Newtonsoft.Json.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Owin.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.Helpers.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.Mvc.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.Optimization.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.Razor.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.WebPages.Deployment.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.WebPages.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.WebPages.Razor.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\WebGrease.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AI.DependencyCollector.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AI.ServerTelemetryChannel.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AI.Web.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AI.WindowsServer.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.ApplicationInsights.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.Helpers.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.Mvc.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.Optimization.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.Razor.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.WebPages.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.WebPages.Deployment.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\System.Web.WebPages.Razor.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Antlr3.Runtime.pdb
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Newtonsoft.Json.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\EntityFramework.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\EntityFramework.SqlServer.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Core.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.Owin.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Host.SystemWeb.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Facebook.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Cookies.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.OAuth.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Google.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.Twitter.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\System.Web.Helpers.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\System.Web.Mvc.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\System.Web.Optimization.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\System.Web.Razor.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\System.Web.WebPages.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\System.Web.WebPages.Deployment.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\System.Web.WebPages.Razor.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\EntityFramework.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\EntityFramework.SqlServer.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+H:\Projects\Projects C#\Qabulxona\Qabulxona\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll

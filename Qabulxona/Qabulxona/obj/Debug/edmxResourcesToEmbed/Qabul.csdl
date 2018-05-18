@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qabulxonaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="CheckLogin_Result">
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="UserTypeId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UserLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="CloseCompleteRequests_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubject" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ReadDate" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="AnswerComment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="CloseRequests_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubject" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="CloseRequestsForOthers_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubject" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ReadDate" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="AnswerComment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="CompleteRequests_Result">
+    <Property Name="AnswerId" Type="Int64" Nullable="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ReadDate" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="AnswerComment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RequestId" Type="Int64" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="expired1_3_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="expired1_3ForIspol_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="expired10__Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="expired10_ForIspol_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="expired3_5_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="expired3_5ForIspol_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="expired5_10_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="expired5_10ForIspol_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="NewRequests_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubject" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="InComeDate" Type="DateTime" />
+  </ComplexType>
+  <ComplexType Name="OpenRequests_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubject" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DaysToSolveForIspol" Type="DateTime" />
+  </ComplexType>
+  <ComplexType Name="OpenRetweetRequests_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubject" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ReadDate" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="AnswerComment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="ReqStatistic_Result">
+    <Property Name="soon1" Type="Int32" />
+    <Property Name="soon1_3" Type="Int32" />
+    <Property Name="soon3_5" Type="Int32" />
+    <Property Name="totalExpired" Type="Int32" />
+    <Property Name="expired1_3" Type="Int32" />
+    <Property Name="expired3_5" Type="Int32" />
+    <Property Name="expired5_10" Type="Int32" />
+    <Property Name="expired10_" Type="Int32" />
+    <Property Name="soon1forispol" Type="Int32" />
+    <Property Name="soon2forispol" Type="Int32" />
+    <Property Name="soon3forispol" Type="Int32" />
+    <Property Name="totalExpiredforispol" Type="Int32" />
+    <Property Name="expired1_3forispol" Type="Int32" />
+    <Property Name="expired3_5forispol" Type="Int32" />
+    <Property Name="expired5_10forispol" Type="Int32" />
+    <Property Name="expired10_forispol" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="ReqStatUser_Result">
+    <Property Name="total" Type="Int32" />
+    <Property Name="totalmonth" Type="Int32" />
+    <Property Name="in" Type="Int32" />
+    <Property Name="inmonth" Type="Int32" />
+    <Property Name="inprocent" Type="Int32" />
+    <Property Name="out" Type="Int32" />
+    <Property Name="outmonth" Type="Int32" />
+    <Property Name="outprocent" Type="Int32" />
+    <Property Name="closed" Type="Int32" />
+    <Property Name="closedmonth" Type="Int32" />
+    <Property Name="closedprocent" Type="Int32" />
+    <Property Name="soon1" Type="Int32" />
+    <Property Name="soon1_3" Type="Int32" />
+    <Property Name="soon3_5" Type="Int32" />
+    <Property Name="totalExpired" Type="Int32" />
+    <Property Name="expired1_3" Type="Int32" />
+    <Property Name="expired3_5" Type="Int32" />
+    <Property Name="expired5_10" Type="Int32" />
+    <Property Name="expired10_" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="RetweetRequests_Result">
+    <Property Name="AnswerId" Type="Int64" Nullable="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ReadDate" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserReadDate" Type="DateTime" />
+    <Property Name="AnswerComment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RequestId" Type="Int64" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="Soon1_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="Soon1_3_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="Soon1ForIspol_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="Soon2ForIspol_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="Soon3ForIspol_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="Soon4_7_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="TotalExpired_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="TotalExpiredForIspol_Result">
+    <Property Name="RequestId" Type="Int64" Nullable="false" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" />
+    <Property Name="ClosedDate" Type="DateTime" />
+    <Property Name="LastVisit" Type="DateTime" />
+    <Property Name="DaysToSolve" Type="DateTime" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <EntityType Name="Answers">
+    <Key>
+      <PropertyRef Name="AnswerId" />
+    </Key>
+    <Property Name="AnswerId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestId" Type="Int64" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="AnswerText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnswerFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AnswerStatus" Type="Int32" />
+    <Property Name="VisaFile" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ReadDate" Type="DateTime" Precision="3" />
+    <Property Name="DaysToSolve" Type="DateTime" Precision="3" />
+    <Property Name="AnswerComment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UserReadDate" Type="DateTime" Precision="3" />
+    <Property Name="UserAnswDate" Type="DateTime" Precision="3" />
+    <Property Name="ispol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DaysToSolveForIspol" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Areas">
+    <Key>
+      <PropertyRef Name="AreaId" />
+    </Key>
+    <Property Name="AreaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionId" Type="Int32" />
+    <Property Name="AreaNameUzk" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AreaNameRu" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YearOfBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RegionId" Type="Int32" />
+    <Property Name="AreaId" Type="Int32" />
+    <Property Name="SexId" Type="Int32" />
+    <Property Name="Adress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Regions">
+    <Key>
+      <PropertyRef Name="RegionId" />
+    </Key>
+    <Property Name="RegionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionNameUzk" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RegionNameRu" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Requests">
+    <Key>
+      <PropertyRef Name="RequestId" />
+    </Key>
+    <Property Name="RequestId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonId" Type="Int64" />
+    <Property Name="RequestSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestShortText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RequestFile" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestStatusId" Type="Int32" />
+    <Property Name="InComeDate" Type="DateTime" Precision="3" />
+    <Property Name="ClosedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastVisit" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="RequestStatuses">
+    <Key>
+      <PropertyRef Name="StatusId" />
+    </Key>
+    <Property Name="StatusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusNameUzk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StatusNameRu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RequestSubjectTypes">
+    <Key>
+      <PropertyRef Name="RequestSubjectTypeID" />
+    </Key>
+    <Property Name="RequestSubjectTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestSubjectNameUz" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RequestSubjectNameRu" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sexs">
+    <Key>
+      <PropertyRef Name="SexId" />
+    </Key>
+    <Property Name="SexId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SexNameUzk" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SexNameRu" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserTypeId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UserLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserFullName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="qabulxonaEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Answers" EntityType="Self.Answers" />
+    <EntitySet Name="Areas" EntityType="Self.Areas" />
+    <EntitySet Name="Persons" EntityType="Self.Persons" />
+    <EntitySet Name="Regions" EntityType="Self.Regions" />
+    <EntitySet Name="Requests" EntityType="Self.Requests" />
+    <EntitySet Name="RequestStatuses" EntityType="Self.RequestStatuses" />
+    <EntitySet Name="RequestSubjectTypes" EntityType="Self.RequestSubjectTypes" />
+    <EntitySet Name="Sexs" EntityType="Self.Sexs" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <FunctionImport Name="CheckLogin" IsComposable="true" ReturnType="Collection(qabulxonaModel.CheckLogin_Result)">
+      <Parameter Name="Login" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CloseCompleteRequests" IsComposable="true" ReturnType="Collection(qabulxonaModel.CloseCompleteRequests_Result)">
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CloseRequests" IsComposable="true" ReturnType="Collection(qabulxonaModel.CloseRequests_Result)">
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CloseRequestsForOthers" IsComposable="true" ReturnType="Collection(qabulxonaModel.CloseRequestsForOthers_Result)">
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CompleteRequests" IsComposable="true" ReturnType="Collection(qabulxonaModel.CompleteRequests_Result)" />
+    <FunctionImport Name="expired1_3" IsComposable="true" ReturnType="Collection(qabulxonaModel.expired1_3_Result)" />
+    <FunctionImport Name="expired1_3ForIspol" IsComposable="true" ReturnType="Collection(qabulxonaModel.expired1_3ForIspol_Result)" />
+    <FunctionImport Name="expired10_" IsComposable="true" ReturnType="Collection(qabulxonaModel.expired10__Result)" />
+    <FunctionImport Name="expired10_ForIspol" IsComposable="true" ReturnType="Collection(qabulxonaModel.expired10_ForIspol_Result)" />
+    <FunctionImport Name="expired3_5" IsComposable="true" ReturnType="Collection(qabulxonaModel.expired3_5_Result)" />
+    <FunctionImport Name="expired3_5ForIspol" IsComposable="true" ReturnType="Collection(qabulxonaModel.expired3_5ForIspol_Result)" />
+    <FunctionImport Name="expired5_10" IsComposable="true" ReturnType="Collection(qabulxonaModel.expired5_10_Result)" />
+    <FunctionImport Name="expired5_10ForIspol" IsComposable="true" ReturnType="Collection(qabulxonaModel.expired5_10ForIspol_Result)" />
+    <FunctionImport Name="NewRequests" IsComposable="true" ReturnType="Collection(qabulxonaModel.NewRequests_Result)">
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="OpenRequests" IsComposable="true" ReturnType="Collection(qabulxonaModel.OpenRequests_Result)">
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="OpenRetweetRequests" IsComposable="true" ReturnType="Collection(qabulxonaModel.OpenRetweetRequests_Result)">
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ReqStatistic" IsComposable="true" ReturnType="Collection(qabulxonaModel.ReqStatistic_Result)" />
+    <FunctionImport Name="ReqStatUser" IsComposable="true" ReturnType="Collection(qabulxonaModel.ReqStatUser_Result)">
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="RetweetRequests" IsComposable="true" ReturnType="Collection(qabulxonaModel.RetweetRequests_Result)" />
+    <FunctionImport Name="Soon1" IsComposable="true" ReturnType="Collection(qabulxonaModel.Soon1_Result)" />
+    <FunctionImport Name="Soon1_3" IsComposable="true" ReturnType="Collection(qabulxonaModel.Soon1_3_Result)" />
+    <FunctionImport Name="Soon1ForIspol" IsComposable="true" ReturnType="Collection(qabulxonaModel.Soon1ForIspol_Result)" />
+    <FunctionImport Name="Soon2ForIspol" IsComposable="true" ReturnType="Collection(qabulxonaModel.Soon2ForIspol_Result)" />
+    <FunctionImport Name="Soon3ForIspol" IsComposable="true" ReturnType="Collection(qabulxonaModel.Soon3ForIspol_Result)" />
+    <FunctionImport Name="Soon4_7" IsComposable="true" ReturnType="Collection(qabulxonaModel.Soon4_7_Result)" />
+    <FunctionImport Name="TotalExpired" IsComposable="true" ReturnType="Collection(qabulxonaModel.TotalExpired_Result)" />
+    <FunctionImport Name="TotalExpiredForIspol" IsComposable="true" ReturnType="Collection(qabulxonaModel.TotalExpiredForIspol_Result)" />
+  </EntityContainer>
+</Schema>

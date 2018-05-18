@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Qabulxona.Models.Requests>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="col-md-11">
+</div>
+<div class="col-md-12" style="padding-bottom:2em;">
+    <input type="button" class="btn btn-danger" value="Выход" onclick="window.location.href='/admin/exit'"/>
+</div>
+
+<ul class="nav nav-pills nav-justified" style="padding-bottom:2em;">
+    <li class="active"><a href="~/Admin/IndexNew">Новые обращения <span class="badge">@ViewBag.newquanty</span></a></li>
+    <li><a href="~/Admin/IndexOld">Открытые обращения <span class="badge">@ViewBag.openquanty</span></a></li>
+    <li><a href="~/Admin/IndexClosed">Закрытые обращения <span class="badge">@ViewBag.closequanty</span></a></li>
+</ul>
+
+<hr />
+
+<div class="row" style="padding-bottom:2em;">
+    <div class="col-sm-4" style="padding-right:0em; padding-left:17em;">
+        <img src="~/Models/Images/vazir.jpg" class="img-thumbnail" style="width:116px; height:139px;" />
+    </div>
+    <div class="col-sm-4" style="padding-left:0em; padding-right:0em; padding-top:2em;">
+        <a href="~/Home/Index">
+            <strong>
+                Виртуальная приемная министра Высшего и среднего специального образования Республики Узбекистан
+            </strong>
+        </a>
+        <h3>Касимова Рустама Сабировича</h3>
+    </div>
+    <div class="col-sm-2" style="padding-left:1em;">
+        <img src="~/Models/Images/gerb.png" style="width:124px; height:134px;" />
+    </div>
+</div>
+
+<hr />
+
+<div class="panel panel-primary">
+    <div class="panel-heading h1"><p class="h3" style="padding-top:0.5em; padding-left:1em;">Новые обращения</p></div>
+    <div class="panel-body">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayName("ФИО")
+                </th>
+                <th>
+                    @Html.DisplayName("Тема обращения")
+                </th>
+                <th>
+                    @Html.DisplayName("Номер обращения")
+                </th>
+                <th>
+                    @Html.DisplayName("Статус обращения")
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RequestSubject)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RequestNumber)
+                    </td>
+                    <td>
+                        @if (item.RequestStatusId == 1)
+                        {
+                            @Html.DisplayName("Новое")
+                        }
+                        @if (item.RequestStatusId == 2)
+                        {
+                            @Html.DisplayName("Просматривается")
+                        }
+                        @if (item.RequestStatusId == 3)
+                        {
+                            @Html.DisplayName("Дан ответ")
+                        }
+                    </td>
+                    <td>
+                        @Html.ActionLink("Просмотреть", "Details", new { id = item.RequestId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+

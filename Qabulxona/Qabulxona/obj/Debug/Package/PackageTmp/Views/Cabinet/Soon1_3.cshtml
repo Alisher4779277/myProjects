@@ -1,0 +1,157 @@
+﻿
+@{
+    ViewBag.Title = "Soon1_3";
+    Layout = "~/Views/Shared/View.cshtml";
+    Qabulxona.Models.QabulxonaEntities db = new Qabulxona.Models.QabulxonaEntities();
+}
+
+@model IEnumerable<Qabulxona.Models.Soon1_3_Result>
+
+<div class="row tile_count">
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-list"></i> Жами мурожаатлар</span>
+        <div class="count blue">@ViewBag.Total</div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" onmousedown="window.location.href='/Cabinet/IndexNew'" onmouseover="mouseovernew()" onmouseout="mouseoutnew()" id="newreq">
+        <span class="count_top"><i class="fa fa-inbox"></i> Янги мурожаатлар</span>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="count purple">@ViewBag.New</div>
+            </div>
+            <div class="col-md-2 count purple">
+                <h3>
+                    / (@ViewBag.NewProcent%)
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" onmousedown="window.location.href='/Cabinet/IndexOld'" onmouseover="mouseoverold()" onmouseout="mouseoutold()" id="oldreq">
+        <span class="count_top"><i class="fa fa-folder-open"></i> Очиқ мурожаатлар</span>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="count red">@ViewBag.Open</div>
+            </div>
+            <div class="col-md-2 count red">
+                <h3>
+                    / (@ViewBag.OpenProcent%)
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" onmousedown="window.location.href='/Cabinet/IndexClosed'" onmouseover="mouseovercl()" onmouseout="mouseoutcl()" id="clreq">
+        <span class="count_top"><i class="fa fa-archive"></i> Ёпиқ мурожаатлар</span>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="count green">@ViewBag.Close </div>
+            </div>
+            <div class="col-md-2 count green">
+                <h3>
+                    / (@ViewBag.CloseProcent%)
+                </h3>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+    function mouseoverok() {
+        document.getElementById("okreq").style.color = "red";
+    }
+    function mouseoutok() {
+        document.getElementById("okreq").style.color = "";
+    }
+    function mouseoverret() {
+        document.getElementById("retreq").style.color = "red";
+    }
+    function mouseoutret() {
+        document.getElementById("retreq").style.color = "";
+    }
+    function mouseovercl() {
+        document.getElementById("clreq").style.color = "red";
+    }
+    function mouseoutcl() {
+        document.getElementById("clreq").style.color = "";
+    }
+    function mouseoverold() {
+        document.getElementById("oldreq").style.color = "red";
+    }
+    function mouseoutold() {
+        document.getElementById("oldreq").style.color = "";
+    }
+    function mouseovernew() {
+        document.getElementById("newreq").style.color = "red";
+    }
+    function mouseoutnew() {
+        document.getElementById("newreq").style.color = "";
+    }
+</script>
+
+<div class="panel panel-primary no-border" style="border:0px;">
+    <div class="panel-heading h1" style="margin-bottom:0px;"><p class="h3">Мурожаатлар</p></div>
+    <div class="panel-body" style="padding-top:0px; padding-bottom:0em; padding-left:0px; padding-right:0px;">
+        <table id="datatable" class="table table-bordered table-striped" style="padding-bottom:0em; margin-bottom:0px;">
+            <tr>
+                <th>
+                    @Html.DisplayName("ID")
+                </th>
+                <th>
+                    @Html.DisplayName("Мурожаат мавзуси")
+                </th>
+                <th>
+                    @Html.DisplayName("Жўнатувчи")
+                </th>
+                <th>
+                    @Html.DisplayName("Мурожаат рақами")
+                </th>
+                <th>
+                    @Html.DisplayName("Мурожаат санаси")
+                </th>
+                <th>
+                    @Html.DisplayName("Кимга йуналтирилган")
+                </th>
+                <th>
+                    @Html.DisplayName("Кўриб чиқиш муддати")
+                </th>
+                <th>
+                    @Html.DisplayName("Ижрочилар")
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RequestId)
+                    </td>
+                    <td>
+                        @Html.ActionLink(item.RequestSubject, "Details", new { id = item.RequestId })
+                    </td>
+                    <td>
+                        @db.Persons.FirstOrDefault(m => m.PersonId == item.PersonId).PersonName
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RequestNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InComeDate)
+                    </td>
+                    <td>
+                        @db.Users.FirstOrDefault(m => m.UserId == item.UserId).UserName
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DaysToSolve)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ispol)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    @*<div class="col-md-8" style="padding-top:1em;">
+        <input type="button" class="btn btn-dark" value="Назад" style="width:200px;" onclick="window.location.href='/Cabinet/Home'" />
+
+    </div>*@
+</div>

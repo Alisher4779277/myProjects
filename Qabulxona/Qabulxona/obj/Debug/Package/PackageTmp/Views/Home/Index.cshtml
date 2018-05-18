@@ -1,0 +1,305 @@
+﻿@model Qabulxona.Models.Info
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="row">
+    <div class="col-sm-4" style="text-align:center">
+    </div>
+    <div class="col-sm-4" style="text-align:center;">
+        <div class="col-md-12">
+            <img src="~/Models/Images/gerb.png" style="width:84px; height:94px;" />
+        </div>
+
+        <a href="~/Home/Index">
+            <strong>
+                Виртуальная приёмная хакима Сергелийского района города Ташкент
+            </strong>
+        </a>
+
+    </div>
+    <div class="col-sm-4" style="text-align:right   ">
+            <div class="row">
+                <img src="~/Models/Images/flag_uzbekistana.png" onclick="window.location.href='/Home/IndexUz'" style="width:40px; height:20px;" />
+                <img src="~/Models/Images/flag_rossii.png" onclick="window.location.href='/Home/Index'" style="width:40px; height:20px;" />
+            </div>
+        </div>
+</div>
+<hr />
+
+<div style="padding-top:2em; padding-bottom:2em; text-align:center">
+    <strong>
+        <var class="h4">
+            У Вас есть нерешённые проблемы, заявления, жалобы или предложения? <br />
+            Направляйте их хакиму Сергелийского района города Ташкент отправив обращение или позвонив по короткому номеру "1071"
+        </var>
+    </strong>
+</div>
+
+
+
+<hr />
+
+<div class="col-md-12">
+    <div class="col-md-12" style="text-align:center">
+        <var class="h4">
+            Проверьте статус обращения
+        </var>
+    </div>
+    <div class="col-md-12" style="text-align:center">
+        <a href="~/Home/Contact/">
+            <input type="button" class="btn btn-success" value="Проверить результат обращения" />
+        </a>
+    </div>
+</div>
+<hr />
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" , ID = "Action" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        <div class="panel panel-primary" >
+            <div class="panel-heading h1"><p class="h3" style="padding-top:0.5em; padding-left:1em;">Отправьте обращение</p></div>
+            <div class="panel-body">
+                Помеченные звездочкой (*) поля требуют заполнения
+                <hr />
+                <div class="row">
+                    <div class="col-md-6">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Name, "Ф.И.О.*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+                            @Html.LabelFor(model => model.Region, "Регион*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(model => model.Region, SelectLists.Regions(Convert.ToInt32(Session["Lang"])), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Region, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Area, "Район (город)*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(model => model.Area, SelectLists.Districts(0, Convert.ToInt32(Session["Lang"])), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Area, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Adress, "Адрес*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Adress, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Adress, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, "Электронная почта", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Phone, "Телефон*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Sex, "Пол*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @*@Html.DropDownListFor(model => model.Sex, SelectLists.Sexs(Convert.ToInt32(Session["Lang"])), new { @class = "form-control" } )*@
+                                <input id="Sex" name="Sex" type="radio" value="1" style="margin-top:10px;" />
+                                <span>Мужской</span> &emsp;
+                                <input id="Sex" name="Sex" type="radio" value="2" />
+                                <span>Женский</span>
+                                @Html.ValidationMessageFor(model => model.Sex, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.YearOfBirth, "Год рождения*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.YearOfBirth, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.YearOfBirth, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.RequestSubject, "Тип обращения*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @*@Html.TextBoxFor(model => model.RequestSubject, new { @class = "form-control" })*@
+                                <input id="RequestSubject" name="RequestSubject" type="radio" value="1" style="margin-top:10px;" />
+                                <span>Заявление</span>&emsp;
+                                <input id="RequestSubject" name="RequestSubject" type="radio" value="2" />
+                                <span>Жалоба</span> &emsp;
+                                <input id="RequestSubject" name="RequestSubject" type="radio" value="3" />
+                                <span>Предложение</span>
+                                @Html.ValidationMessageFor(model => model.RequestSubject, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ShortText, "Краткое содержание обращения*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.ShortText, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ShortText, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12" style="padding-left:3em">
+                                <hr />
+                                Для оперативного рассмотрения Ваших обращений просим направлять их по каждому вопросу отдельно и излагать обращения лаконичным, простым и ясным языком.
+                                <hr />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Text, "Текст обращения*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.TextAreaFor(model => model.Text, new { @class = "form-control", rows = "7" })
+                                @Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.File, "Выберите файл", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @*<span class="btn btn-info btn-file" style="width:225px;">
+                                        Загрузить <input type="file" name="File">
+                                    </span>*@
+                                @*<label for="File">
+                                    <input type="file" name="File" id="File" style="display:none;" />
+                                    <img src="~/Models/Images/downloadRu.jpg" />
+                                </label>*@
+                                <input type="file" name="File" style="padding-top:0.5em;" />
+                                @Html.ValidationMessageFor(model => model.File, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Captcha, "Код проверки*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <img src='@Url.Action("Captcha", "Home")' alt='captcha' />
+                                @Html.EditorFor(model => model.Captcha, new { htmlAttributes = new { @class = "form-control", @style = "width:100px;" } })
+                                @Html.ValidationMessageFor(model => model.Captcha, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-4 col-md-8">
+                                <input type="submit" value="Отправить" class="btn btn-default btn-primary" style="width:225px;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <hr />
+        <div class="col-md-12">
+            
+            <br />
+            <div class="col-md-12">
+                <strong class="h3">
+                    Публичная оферта <br />
+                </strong>
+                <br />
+                Уважаемые пользователи! <br />
+                &emsp;Вам предоставляется возможность отправки обращений в электронной форме непосредственно к хакиму Сергелийского района города Ташкент. При этом, направляемое Вами обращение является официальным. <br />
+                В связи с этим, просим Вас не забывать следующее: <br />
+                &emsp;1.Если вы обращаетесь как физическое лицо вам необходимо указать фамилию (имя, отчество), сведения о месте жительства и изложена суть обращения. В обращении юридического лица должны быть указаны полное наименование юридического лица, сведения о местонахождении (почтовом адресе) и изложена суть обращения. <br />
+                &emsp;2. Обратите внимание! Запрещается подача обращений, содержащих клевету, оскорбления и ложные доносы. <br />
+                &emsp;3. Также хотим напомнить, что Вам могут отказать в рассмотрении обращения на следующих основаниях: <br />
+                &emsp;&emsp;•    некорректность содержания сообщения (нецензурные, либо оскорбительные выражения, угрозы, предложения, лишенные логики и смысла и т.д.); <br />
+                &emsp;&emsp;•    текст обращения содержит непонятные сокращения или рекламные материалы, не содержит конкретных заявлений, жалоб или предложений. <br />
+                &emsp;4. Также не рассматривается обращение одного и того же пользователя, содержащее вопрос, на который многократно предоставлялся ответ, если в обращении не приводятся новые доводы или обстоятельства. <br />
+                Данные требования установлены исходя из действующего законодательства Республики Узбекистан.
+            </div>
+            
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var Area = $("#Area");
+        var Region = $('#Region');
+        var lang = 1;
+
+        Region.change(function () {
+            var val = $(this).val();
+
+            Area.html('');
+            if (val == "") {
+                Area.attr("disabled", true);
+                Area.append("<option value=\"\">Tanlang</option>");
+            }
+            else {
+                $.getJSON("/Json/GetJsonArea/?id=" + val + "&lang=" + lang, function (data) {
+                    Area.removeAttr("disabled");
+
+                    $.each(data, function (index, dataValue) {
+
+                        Area.append("<option value=\"" + dataValue.Value + "\">" + dataValue.Text + "</option>");
+                    })
+                });
+            }
+        });
+    });
+    $(document).ready(function () {
+
+        $.validator.addMethod(
+       "regex",
+        function (value, element, regexp) {
+            var re = new RegExp(regexp);
+            return this.optional(element) || re.test(value);
+        },
+        "Please check your input."
+        );
+
+        var validator = $('#Action').validate({
+            ignore: "ui-tabs-hide",
+
+            rules: {
+
+                Phone:
+                 {
+                     required: true,
+                     minlength: 7,
+                     regex: "^[+0-9]+$"
+                 }
+
+
+            },
+            messages: {
+
+                Phone:
+                 {
+                     required: "ошибка в вводе",
+                     minlength: "ошибка в вводе",
+                     regex: "ошибка в вводе"
+                 }
+            }
+        });
+    });
+</script>

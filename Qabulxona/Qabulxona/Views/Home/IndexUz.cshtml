@@ -1,0 +1,275 @@
+﻿@model Qabulxona.Models.Info
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-sm-4" style="text-align:center">
+    </div>
+    <div class="col-sm-4" style="text-align:center;">
+        <div class="col-md-12">
+            <img src="~/Models/Images/gerb.png" style="width:84px; height:94px;" />
+        </div>
+        
+        <a href="~/Home/IndexUz">
+            <strong>
+                    Тошкент шаҳар Сергели тумани ҳокими виртуал қабулхонаси
+            </strong>
+        </a>
+        
+    </div>
+    <div class="col-sm-4" style="text-align:right   ">
+        <div class="row">
+            <img src="~/Models/Images/flag_uzbekistana.png" onclick="window.location.href='/Home/IndexUz'" style="width:40px; height:20px;" />
+            <img src="~/Models/Images/flag_rossii.png" onclick="window.location.href='/Home/Index'" style="width:40px; height:20px;" />
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div style="padding-top:2em; padding-bottom:2em; text-align:center">
+    <strong>
+        <var class="h4">
+            Сизда ҳал этилмаган масалалар/муаммолар, ариза, шикоят ёки таклифларни "1071" қисқа рақамига қўнғироқ қилган ҳолда юборишингиз мумкин.
+            (қўнғироқ республика бўйича бепул бўлиб унда фақатгина стационар телефонга қўнғироқ қилиш нархи бўйича ҳақ олинади) 
+            ёки мурожаатингизни тўғридан-тўғри Ўзбекистон Республикаси Тошкент шахар Сергели туман хокимига юборишингиз мумкин.
+        </var>
+    </strong>
+</div>
+
+<hr />
+
+@using (Html.BeginForm("IndexUz", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "Action" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="col-md-12">
+        <div class="col-md-12" style="text-align:center">
+            <var class="h4">
+                Мурожаат мақомини текшириб кўринг
+            </var>
+            </div>
+        <div class="col-md-12" style="text-align:center">
+            <a href="~/Home/ContactUz/">
+                <input type="button" class="btn btn-success" value="Мурожаат натижасини текшириш" />
+            </a>
+        </div>
+        <hr />
+    </div>
+
+    <div class="form-horizontal">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading h1"><p class="h3" style="padding-top:0.5em; padding-left:1em;">Мурожаатни юборинг</p></div>
+            <div class="panel-body">
+                Юлдузча (*) билан белгиланган сатрлар толдирилиши талаб этилади
+                <hr />
+                <div class="row">
+                    <div class="col-md-6">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Name, "Ф.И.Ш.*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Adress, "Манзил*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Adress, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Adress, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, "Электрон почта", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Phone, "Телефон*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", @placeholder = "+998 XX XXX XX XX" } })
+                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Sex, "Жинс*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @*@Html.DropDownListFor(model => model.Sex, SelectLists.Sexs(Convert.ToInt32(Session["Lang"])), new { @class = "form-control" })*@
+                                <input id="Sex" name="Sex" type="radio" value="1" style="margin-top:10px;" />
+                                <span>Эркак</span> &emsp;
+                                <input id="Sex" name="Sex" type="radio" value="2" style="margin-top:10px;" />
+                                <span>Аёл</span> &emsp;
+                                @Html.ValidationMessageFor(model => model.Sex, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.YearOfBirth, "Туғилган йилингиз*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.YearOfBirth, new { htmlAttributes = new { @class = "form-control", @placeholder = "dd/mm/yyyy" } })
+                                @Html.ValidationMessageFor(model => model.YearOfBirth, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.RequestSubject, "Мурожаат тури*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <input id="RequestSubject" name="RequestSubject" type="radio" value="1" style="margin-top:10px;" />
+                                <span>Ариза</span> &emsp;
+                                <input id="RequestSubject" name="RequestSubject" type="radio" value="2" style="margin-top:10px;" />
+                                <span>Шикоят</span> &emsp;
+                                <input id="RequestSubject" name="RequestSubject" type="radio" value="3" style="margin-top:10px;" />
+                                <span>Таклиф</span> &emsp;
+                                @Html.ValidationMessageFor(model => model.RequestSubject, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ShortText, "Мурожаат қисқача мазмуни*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.ShortText, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ShortText, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Text, "Мурожаат матни*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.TextAreaFor(model => model.Text, new { @class = "form-control", rows = "7" })
+                                @Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.File, "Файлни танланг", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                            
+                                <input type="file" name="File" style="padding-top:0.5em;" />
+                                @Html.ValidationMessageFor(model => model.File, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Captcha, "Расмдаги сонларни киритинг*", htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                <img src='@Url.Action("Captcha", "Home")' alt='captcha' />
+                                @Html.EditorFor(model => model.Captcha, new { htmlAttributes = new { @class = "form-control", @style = "width:100px;" } })
+                                @Html.ValidationMessageFor(model => model.Captcha, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-4 col-md-8">
+                                <input type="submit" value="Жўнатиш" class="btn btn-default btn-primary" style="width:225px;" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+        <hr />
+        <div class="col-md-12">
+            <strong class="h3">
+                Оммавий оферта <br />
+            </strong>
+            <br />
+            Ҳурматли фойдаланувчи! <br />
+            &emsp;Сизга Ўзбекистон Республикаси Тошкент шахар Сергели тумани хокимига бевосита электрон тарзда мурожаатларни юбориш имконияти тақдим этилмоқда. Шу билан бирга,
+            Сизнинг юбораётган мурожаатингиз расмий мақомга эга эканлигини ҳам эслатиб қўймоқчимиз. <br />
+            &emsp;Шу сабабли, Сиздан қуйидагиларни унутмаслигингизни сўраймиз: <br />
+            &emsp;1. Жисмоний шахс сифатида мурожаат йўлласангиз фамилиянгиз (исмингиз, отангизнинг исми), яшаш жойингиз тўғрисидаги маълумотлар кўрсатилган ва
+            мурожаатингиз моҳияти баён этилган бўлиши шарт. Юридик шахс сифатида мурожаат йўлласангиз юридик шахснинг тўлиқ номи, унинг жойлашган жойи (почта
+            манзили) тўғрисидаги маълумотлар кўрсатилган ва мурожаатнинг моҳияти баён этилиши талаб этилади. <br />
+            &emsp;2. Алоҳида эътибор беринг! Туҳмат, ҳақорат сўзлар ишлатилган ва ёлғон хабар берувчи мурожаатларни тақдим этиш мумкин эмас. <br />
+            &emsp;3. Шунингдек, қуйидаги ҳолатларда мурожаатларингиз рад этилиши мумкинлигини эслатиб ўтмоқчимиз: <br />
+            &emsp;&emsp;•    одобсизлик мазмунидаги мурожаатлар (уятсиз ёхуд ҳақоратли иборалар, таҳдидлар, мантиқ ва маъноси бўлмаган таклифлар ва шунга ўхшаш мурожаатлар); <br />
+            &emsp;&emsp;•    мурожаат матнида тушунарсиз қисқартиришлар ёки реклама материаллари мавжуд бўлган, таркибида аниқ аризалар, шикоятлар ёки таклифлар бўлмаган мурожаатлар <br />
+            &emsp;4. Шунингдек, фойдаланувчининг бир неча бор битта масала бўйича жавоб берилган мурожаатини қайта юборилганда агар унда янги важлар ёки ҳолатлар келтирилмаган бўлса, кўриб чиқилмайди. <br />
+            &emsp;Мазкур шартларнинг барчаси Ўзбекистон Республикасининг амалдаги қонунчилигидан келиб чиққан ҳолда белгиланган.
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var Area = $("#Area");
+        var Region = $('#Region');
+        var lang = 2;
+
+        Region.change(function () {
+            var val = $(this).val();
+
+            Area.html('');
+            if (val == "") {
+                Area.attr("disabled", true);
+                Area.append("<option value=\"\">Tanlang</option>");
+            }
+            else {
+                $.getJSON("/Json/GetJsonArea/?id=" + val + "&lang=" + lang, function (data) {
+                    Area.removeAttr("disabled");
+
+                    $.each(data, function (index, dataValue) {
+
+                        Area.append("<option value=\"" + dataValue.Value + "\">" + dataValue.Text + "</option>");
+                    })
+                });
+            }
+        });
+    });
+    $(document).ready(function () {
+
+        $.validator.addMethod(
+       "regex",
+        function (value, element, regexp) {
+            var re = new RegExp(regexp);
+            return this.optional(element) || re.test(value);
+        },
+        "Please check your input."
+        );
+
+        var validator = $('#Action').validate({
+            ignore: "ui-tabs-hide",
+
+            rules: {
+
+                Phone:
+                 {
+                     required: true,
+                     minlength: 7,
+                     maxlength: 7,
+                     regex: "^[+0-9]+$"
+                 }
+
+
+            },
+            messages: {
+
+                Phone:
+                 {
+                     required: "Хато киритилди",
+                     minlength: "Хато киритилди",
+                     regex: "Хато киритилди"
+                 }
+            }
+        });
+    });
+</script>

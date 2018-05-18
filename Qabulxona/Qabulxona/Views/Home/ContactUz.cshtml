@@ -1,0 +1,102 @@
+﻿@model Qabulxona.Models.Info
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+<div style="text-align:right" class="col-md-12">
+    <div class="row">
+        <img src="~/Models/Images/flag_uzbekistana.png" onclick="window.location.href='/Home/ContactUz'" style="width:40px; height:20px;" />
+        <img src="~/Models/Images/flag_rossii.png" onclick="window.location.href = '/Home/Contact'" style="width:40px; height:20px;" />
+    </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col-sm-4" style="text-align:center">
+    </div>
+    <div class="col-sm-4" style="text-align:center;">
+        <div class="col-md-12">
+            <img src="~/Models/Images/gerb.png" style="width:84px; height:94px;" />
+        </div>
+
+        <a href="~/Home/IndexUz">
+            <strong>
+                Тошкент шаҳар Сергели тумани ҳокими виртуал қабулхонаси
+            </strong>
+        </a>
+
+    </div>
+    <div class="col-sm-4" style="text-align:right   ">
+            <div class="row">
+                <img src="~/Models/Images/flag_uzbekistana.png" onclick="window.location.href='/Home/IndexUz'" style="width:40px; height:20px;" />
+                <img src="~/Models/Images/flag_rossii.png" onclick="window.location.href='/Home/Index'" style="width:40px; height:20px;" />
+            </div>
+        </div>
+</div>
+
+<hr />
+
+<div style="padding-top:2em; padding-bottom:2em; text-align:center">
+    <strong>
+        <var class="h4">
+            Сизда ҳал этилмаган масалалар/муаммолар, ариза, шикоят ёки таклифларни "1071" қисқа рақамига қўнғироқ қилган ҳолда юборишингиз мумкин.
+            (қўнғироқ республика бўйича бепул бўлиб унда фақатгина стационар телефонга қўнғироқ қилиш нархи бўйича ҳақ олинади)
+            ёки мурожаатингизни тўғридан-тўғри Ўзбекистон Республикаси Тошкент шахар Сергели туман хокимига юборишингиз мумкин.</var>
+    </strong>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        <div class="panel panel-success">
+            <div class="panel-heading h1"><p class="h3" style="padding-top:0.5em; padding-left:1em;">Мурожаат натижасини текширинг</p></div>
+            <div class="panel-body">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RequestNumber, "Мурожаат рақами:", htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.RequestNumber, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.RequestNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RequestPassword, "Холатни текшириш коди:", htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.RequestPassword, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.RequestPassword, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Captcha, "Расмдаги сонларни киритинг", htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-8">
+                        <img src='@Url.Action("Captcha", "Home")' alt='captcha' />
+                        @Html.EditorFor(model => model.Captcha, new { htmlAttributes = new { @class = "form-control", @style = "width:100px;" } })
+                        @Html.ValidationMessageFor(model => model.Captcha, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-8">
+                        <input type="submit" value="Текшириш" class="btn btn-default btn-success" style="width:225px;" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+<input type="button" class="btn btn-info" value="Ортга" onclick="window.location.href='/home/indexuz'" />
+
+<hr />
+
+

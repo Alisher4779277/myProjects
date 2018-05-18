@@ -1,0 +1,51 @@
+﻿@{
+    string notification = "";
+    if (TempData["natija"] != null)
+    {
+         notification = TempData["natija"].ToString();
+    }
+
+}
+    <div id="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb">
+                <li><a href="index.html">Bosh sahifa</a></li>
+                <li>Aloqa</li>
+            </div>
+        </div>
+    </div>
+    <br />
+<h2 style="text-align:center"><b>@notification</b></h2>
+    <section id="contact-page">
+        <div class="container">
+            <div class="center">
+           
+                <h2>Xabaringizni qoldiring bizga </h2>
+                <p>Ismingiz, maqsadingiz va qisqacha nimani bilishni xohlashingizni yozing</p>
+            </div>
+            <div class="row contact-wrap contacts">
+                <div class="status alert alert-success" style="display: none"></div>
+                <div class="col-md-6 col-md-offset-3">
+                 
+                    <form action="~/Home/Contactus" method="post" role="form" class="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="PhoneNumber" class="form-control" name="PhoneNumber" id="PhoneNumber" placeholder="PhoneNumber" data-rule="PhoneNumber" data-msg="Please enter a valid PhoneNumber" />
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                        </div>
+                        <div class="text-center"><button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Xabarni jo'natish</button></div>
+                   
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+

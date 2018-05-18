@@ -1,0 +1,140 @@
+﻿@model Insurance_car.Models.Insurance
+@{
+    Insurance_car.Models.sugurtaEntities db = new Insurance_car.Models.sugurtaEntities();
+    Insurance_car.Models.Insurance a;
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Layout_admin.cshtml";
+    if (ViewBag.ID != null) { }
+    int Id = ViewBag.ID;
+
+}
+
+@{a = db.Insurances.FirstOrDefault(m => m.Id == Id); }
+@using (Html.BeginForm("delete", "admin", FormMethod.Post))
+{
+<div class="col-md-12">
+    <div class="col-md-2">
+
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-primary no-border" style="border:0px;">
+            <div class="panel-heading h1" style="margin-bottom:0px;"><p class="h3">Ma'lumot</p></div>
+            <table class="table table-bordered table-striped" style="padding-bottom:0em; margin-bottom:0px;">
+                <tr>
+                    <th>
+                        @Html.DisplayName("F I O")
+                    </th>
+                    <td>
+                        @db.Insurances.FirstOrDefault(m => m.Id == Id).Person_Name
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Adres")
+                    </th>
+                    <td>
+                        @db.Insurances.FirstOrDefault(m => m.Id == Id).Person_Address
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Telefon raqami")
+                    </th>
+                    <td>
+                        @db.Insurances.FirstOrDefault(m => m.Id == Id).PhonoNumber
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        @Html.DisplayName("Sana")
+                    </th>
+                    <td>
+                        @db.Insurances.FirstOrDefault(m => m.Id == Id).Date
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Hudud")
+                    </th>
+                    <td>
+                        @db.Areas.FirstOrDefault(m => m.Id == a.Area_Id).Name
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Hodisa")
+                    </th>
+                    <td>
+                        @db.Event_Insurance.FirstOrDefault(m => m.Id == a.State_Id).Name
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Transport")
+                    </th>
+                    <td>
+                        @db.Transport_type.FirstOrDefault(m => m.Id == a.Transport_Id).Name
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Maqomi")
+                    </th>
+                    <td>
+                        @db.Type_User.FirstOrDefault(m => m.Id == a.Type_UserId).Type_User1
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Yoshi")
+                    </th>
+                    @if (a.Born < 2)
+                    {
+                        <td>
+                            22 yoshdan kichik
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            22 yoshdan katta
+                        </td>
+                    }
+                </tr>
+
+                <tr>
+                    <th>
+                        @Html.DisplayName("Haydovchilik tajribasi")
+                    </th>
+                    <td>
+                        @db.Experiences.FirstOrDefault(m => m.Id == a.Exper_Id).Year_Experience
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Sug`urta qilish muddati")
+                    </th>
+                    <td>
+                        @db.Term_Insurance.FirstOrDefault(m => m.Id == a.Term_Id).Term
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+            <div class="form-group">
+                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                    <button type="submit" style="width:220px;" class="btn btn-danger">O`chirish</button>
+                </div>
+            </div>
+    </div>
+
+
+</div>
+
+}
+
+
+<!-- jQuery -->
+<script src="~/Content/gentelella-master/vendors/jquery/dist/jquery.min.js"></script>

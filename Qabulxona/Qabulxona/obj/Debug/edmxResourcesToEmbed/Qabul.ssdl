@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище qabulxonaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Answers">
+    <Key>
+      <PropertyRef Name="AnswerId" />
+    </Key>
+    <Property Name="AnswerId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestId" Type="bigint" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="AnswerText" Type="ntext" />
+    <Property Name="AnswerFile" Type="nvarchar" MaxLength="250" />
+    <Property Name="AnswerStatus" Type="int" />
+    <Property Name="VisaFile" Type="nvarchar" MaxLength="350" />
+    <Property Name="ReadDate" Type="datetime" />
+    <Property Name="DaysToSolve" Type="datetime" />
+    <Property Name="AnswerComment" Type="nvarchar" MaxLength="500" />
+    <Property Name="UserReadDate" Type="datetime" />
+    <Property Name="UserAnswDate" Type="datetime" />
+    <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+    <Property Name="DaysToSolveForIspol" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Areas">
+    <Key>
+      <PropertyRef Name="AreaId" />
+    </Key>
+    <Property Name="AreaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegionId" Type="int" />
+    <Property Name="AreaNameUzk" Type="nvarchar" MaxLength="250" />
+    <Property Name="AreaNameRu" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonName" Type="nvarchar" MaxLength="50" />
+    <Property Name="YearOfBirth" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegionId" Type="int" />
+    <Property Name="AreaId" Type="int" />
+    <Property Name="SexId" Type="int" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="250" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Regions">
+    <Key>
+      <PropertyRef Name="RegionId" />
+    </Key>
+    <Property Name="RegionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegionNameUzk" Type="nvarchar" MaxLength="250" />
+    <Property Name="RegionNameRu" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Requests">
+    <Key>
+      <PropertyRef Name="RequestId" />
+    </Key>
+    <Property Name="RequestId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonId" Type="bigint" />
+    <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+    <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+    <Property Name="RequestText" Type="ntext" />
+    <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+    <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="RequestStatusId" Type="int" />
+    <Property Name="InComeDate" Type="datetime" />
+    <Property Name="ClosedDate" Type="datetime" />
+    <Property Name="LastVisit" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RequestStatuses">
+    <Key>
+      <PropertyRef Name="StatusId" />
+    </Key>
+    <Property Name="StatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusNameUzk" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatusNameRu" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RequestSubjectTypes">
+    <Key>
+      <PropertyRef Name="RequestSubjectTypeID" />
+    </Key>
+    <Property Name="RequestSubjectTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestSubjectNameUz" Type="nvarchar" MaxLength="250" />
+    <Property Name="RequestSubjectNameRu" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Sexs">
+    <Key>
+      <PropertyRef Name="SexId" />
+    </Key>
+    <Property Name="SexId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SexNameUzk" Type="nvarchar" MaxLength="250" />
+    <Property Name="SexNameRu" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserTypeId" Type="int" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="250" />
+    <Property Name="UserLogin" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFullName" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <Function Name="CheckLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Login" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserTypeId" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="250" />
+          <Property Name="UserLogin" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserPassword" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CloseCompleteRequests" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestSubjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="250" />
+          <Property Name="ReadDate" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="AnswerComment" Type="nvarchar" MaxLength="500" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CloseRequests" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestSubjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="250" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CloseRequestsForOthers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestSubjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="250" />
+          <Property Name="ReadDate" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="AnswerComment" Type="nvarchar" MaxLength="500" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CompleteRequests" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="AnswerId" Type="bigint" Nullable="false" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="250" />
+          <Property Name="ReadDate" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="AnswerComment" Type="nvarchar" MaxLength="500" />
+          <Property Name="RequestId" Type="bigint" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="expired1_3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="expired1_3ForIspol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="expired10_" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="expired10_ForIspol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="expired3_5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="expired3_5ForIspol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="expired5_10" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="expired5_10ForIspol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="NewRequests" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestSubjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="250" />
+          <Property Name="InComeDate" Type="datetime" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="OpenRequests" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestSubjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="250" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+          <Property Name="DaysToSolveForIspol" Type="datetime" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="OpenRetweetRequests" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestSubjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="250" />
+          <Property Name="ReadDate" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="AnswerComment" Type="nvarchar" MaxLength="500" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="ReqStatistic" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="soon1" Type="int" />
+          <Property Name="soon1_3" Type="int" />
+          <Property Name="soon3_5" Type="int" />
+          <Property Name="totalExpired" Type="int" />
+          <Property Name="expired1_3" Type="int" />
+          <Property Name="expired3_5" Type="int" />
+          <Property Name="expired5_10" Type="int" />
+          <Property Name="expired10_" Type="int" />
+          <Property Name="soon1forispol" Type="int" />
+          <Property Name="soon2forispol" Type="int" />
+          <Property Name="soon3forispol" Type="int" />
+          <Property Name="totalExpiredforispol" Type="int" />
+          <Property Name="expired1_3forispol" Type="int" />
+          <Property Name="expired3_5forispol" Type="int" />
+          <Property Name="expired5_10forispol" Type="int" />
+          <Property Name="expired10_forispol" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="ReqStatUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="total" Type="int" />
+          <Property Name="totalmonth" Type="int" />
+          <Property Name="in" Type="int" />
+          <Property Name="inmonth" Type="int" />
+          <Property Name="inprocent" Type="int" />
+          <Property Name="out" Type="int" />
+          <Property Name="outmonth" Type="int" />
+          <Property Name="outprocent" Type="int" />
+          <Property Name="closed" Type="int" />
+          <Property Name="closedmonth" Type="int" />
+          <Property Name="closedprocent" Type="int" />
+          <Property Name="soon1" Type="int" />
+          <Property Name="soon1_3" Type="int" />
+          <Property Name="soon3_5" Type="int" />
+          <Property Name="totalExpired" Type="int" />
+          <Property Name="expired1_3" Type="int" />
+          <Property Name="expired3_5" Type="int" />
+          <Property Name="expired5_10" Type="int" />
+          <Property Name="expired10_" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="RetweetRequests" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="AnswerId" Type="bigint" Nullable="false" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="250" />
+          <Property Name="ReadDate" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserReadDate" Type="datetime" />
+          <Property Name="AnswerComment" Type="nvarchar" MaxLength="500" />
+          <Property Name="RequestId" Type="bigint" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="Soon1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="Soon1_3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="Soon1ForIspol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="Soon2ForIspol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="Soon3ForIspol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="Soon4_7" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="TotalExpired" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="TotalExpiredForIspol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="RequestId" Type="bigint" Nullable="false" />
+          <Property Name="PersonId" Type="bigint" />
+          <Property Name="RequestSubject" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestShortText" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestText" Type="ntext" />
+          <Property Name="RequestFile" Type="nvarchar" MaxLength="250" />
+          <Property Name="RequestNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestStatusId" Type="int" />
+          <Property Name="InComeDate" Type="datetime" />
+          <Property Name="ClosedDate" Type="datetime" />
+          <Property Name="LastVisit" Type="datetime" />
+          <Property Name="DaysToSolve" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="ispol" Type="nvarchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <EntityContainer Name="Хранилище qabulxonaModelContainer">
+    <EntitySet Name="Answers" EntityType="Self.Answers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Areas" EntityType="Self.Areas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persons" EntityType="Self.Persons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Regions" EntityType="Self.Regions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Requests" EntityType="Self.Requests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RequestStatuses" EntityType="Self.RequestStatuses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RequestSubjectTypes" EntityType="Self.RequestSubjectTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sexs" EntityType="Self.Sexs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

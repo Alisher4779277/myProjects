@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "OpenRetweetRequests";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+
+@model IEnumerable<Qabulxona.Models.OpenRetweetRequests_Result>
+
+<div class="panel panel-primary no-border" style="border:0px;">
+    <div class="panel-heading h1" style="margin-bottom:0px;"><p class="h3">Тасдиғини кутаётган мурожаатлар</p></div>
+    <div class="panel-body" style="padding-top:0px; padding-bottom:0em; padding-left:0px; padding-right:0px;">
+        <table class="table table-bordered table-striped" style="padding-bottom:0em; margin-bottom:0px;">
+            <tr>
+                <th>
+                    @Html.DisplayName("ID")
+                </th>
+                <th>
+                    @Html.DisplayName("Мурожаат")
+                </th>
+                <th>
+                    @Html.DisplayName("Жўнатувчи")
+                </th>
+                <th>
+                    @Html.DisplayName("Мурожаат матни")
+                </th>
+                <th>
+                    @Html.DisplayName("Юборилган сана")
+                </th>
+                <th>
+                    @Html.DisplayName("Кўриб чиқиш муддати")
+                </th>
+
+                <th>
+                    @Html.DisplayName("Изоҳ")
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RequestId)
+                    </td>
+                    <td>
+                        @Html.ActionLink(item.RequestNumber, "Details", new { id = item.RequestId })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PersonName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RequestSubject)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReadDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DaysToSolve)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnswerComment)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

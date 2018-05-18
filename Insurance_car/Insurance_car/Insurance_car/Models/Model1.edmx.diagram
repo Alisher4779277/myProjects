@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f3786d182f594b9aa26b780de1cce4aa" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="sugurtaModel.Users" Width="1.5" PointX="7" PointY="2.875" />
+        <EntityTypeShape EntityType="sugurtaModel.Area" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="sugurtaModel.Contact" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="sugurtaModel.Event_Insurance" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="sugurtaModel.Experience" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="sugurtaModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="sugurtaModel.Term_Insurance" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="sugurtaModel.Transport_type" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="sugurtaModel.Type_User" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="sugurtaModel.State" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="sugurtaModel.Insurance" Width="1.5" PointX="9.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

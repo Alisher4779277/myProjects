@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="939d38fad4a44e838ef3e143bd679529" Name="Diagram1">
+        <EntityTypeShape EntityType="qabulxonaModel.Answers" Width="1.5" PointX="0.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qabulxonaModel.Areas" Width="1.5" PointX="2.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qabulxonaModel.Persons" Width="1.5" PointX="7.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qabulxonaModel.Regions" Width="1.5" PointX="4.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qabulxonaModel.Requests" Width="1.5" PointX="4.125" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qabulxonaModel.RequestStatuses" Width="1.5" PointX="5.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qabulxonaModel.RequestSubjectTypes" Width="1.5" PointX="5.875" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qabulxonaModel.Sexs" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qabulxonaModel.Users" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

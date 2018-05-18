@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище qabulxonaModelContainer" CdmEntityContainer="qabulxonaEntities1">
+    <EntitySetMapping Name="Answers">
+      <EntityTypeMapping TypeName="qabulxonaModel.Answers">
+        <MappingFragment StoreEntitySet="Answers">
+          <ScalarProperty Name="AnswerId" ColumnName="AnswerId" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AnswerText" ColumnName="AnswerText" />
+          <ScalarProperty Name="AnswerFile" ColumnName="AnswerFile" />
+          <ScalarProperty Name="AnswerStatus" ColumnName="AnswerStatus" />
+          <ScalarProperty Name="VisaFile" ColumnName="VisaFile" />
+          <ScalarProperty Name="ReadDate" ColumnName="ReadDate" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="AnswerComment" ColumnName="AnswerComment" />
+          <ScalarProperty Name="UserReadDate" ColumnName="UserReadDate" />
+          <ScalarProperty Name="UserAnswDate" ColumnName="UserAnswDate" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+          <ScalarProperty Name="DaysToSolveForIspol" ColumnName="DaysToSolveForIspol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Areas">
+      <EntityTypeMapping TypeName="qabulxonaModel.Areas">
+        <MappingFragment StoreEntitySet="Areas">
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="AreaNameUzk" ColumnName="AreaNameUzk" />
+          <ScalarProperty Name="AreaNameRu" ColumnName="AreaNameRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persons">
+      <EntityTypeMapping TypeName="qabulxonaModel.Persons">
+        <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="YearOfBirth" ColumnName="YearOfBirth" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="SexId" ColumnName="SexId" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regions">
+      <EntityTypeMapping TypeName="qabulxonaModel.Regions">
+        <MappingFragment StoreEntitySet="Regions">
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="RegionNameUzk" ColumnName="RegionNameUzk" />
+          <ScalarProperty Name="RegionNameRu" ColumnName="RegionNameRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requests">
+      <EntityTypeMapping TypeName="qabulxonaModel.Requests">
+        <MappingFragment StoreEntitySet="Requests">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestStatuses">
+      <EntityTypeMapping TypeName="qabulxonaModel.RequestStatuses">
+        <MappingFragment StoreEntitySet="RequestStatuses">
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="StatusNameUzk" ColumnName="StatusNameUzk" />
+          <ScalarProperty Name="StatusNameRu" ColumnName="StatusNameRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestSubjectTypes">
+      <EntityTypeMapping TypeName="qabulxonaModel.RequestSubjectTypes">
+        <MappingFragment StoreEntitySet="RequestSubjectTypes">
+          <ScalarProperty Name="RequestSubjectTypeID" ColumnName="RequestSubjectTypeID" />
+          <ScalarProperty Name="RequestSubjectNameUz" ColumnName="RequestSubjectNameUz" />
+          <ScalarProperty Name="RequestSubjectNameRu" ColumnName="RequestSubjectNameRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sexs">
+      <EntityTypeMapping TypeName="qabulxonaModel.Sexs">
+        <MappingFragment StoreEntitySet="Sexs">
+          <ScalarProperty Name="SexId" ColumnName="SexId" />
+          <ScalarProperty Name="SexNameUzk" ColumnName="SexNameUzk" />
+          <ScalarProperty Name="SexNameRu" ColumnName="SexNameRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="qabulxonaModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.CheckLogin" FunctionImportName="CheckLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.CheckLogin_Result">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.CloseCompleteRequests" FunctionImportName="CloseCompleteRequests">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.CloseCompleteRequests_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestSubjectName" ColumnName="RequestSubjectName" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="ReadDate" ColumnName="ReadDate" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="AnswerComment" ColumnName="AnswerComment" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.CloseRequests" FunctionImportName="CloseRequests">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.CloseRequests_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestSubjectName" ColumnName="RequestSubjectName" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.CloseRequestsForOthers" FunctionImportName="CloseRequestsForOthers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.CloseRequestsForOthers_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestSubjectName" ColumnName="RequestSubjectName" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="ReadDate" ColumnName="ReadDate" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="AnswerComment" ColumnName="AnswerComment" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.CompleteRequests" FunctionImportName="CompleteRequests">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.CompleteRequests_Result">
+          <ScalarProperty Name="AnswerId" ColumnName="AnswerId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ReadDate" ColumnName="ReadDate" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="AnswerComment" ColumnName="AnswerComment" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.expired1_3" FunctionImportName="expired1_3">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.expired1_3_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.expired1_3ForIspol" FunctionImportName="expired1_3ForIspol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.expired1_3ForIspol_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.expired10_" FunctionImportName="expired10_">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.expired10__Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.expired10_ForIspol" FunctionImportName="expired10_ForIspol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.expired10_ForIspol_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.expired3_5" FunctionImportName="expired3_5">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.expired3_5_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.expired3_5ForIspol" FunctionImportName="expired3_5ForIspol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.expired3_5ForIspol_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.expired5_10" FunctionImportName="expired5_10">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.expired5_10_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.expired5_10ForIspol" FunctionImportName="expired5_10ForIspol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.expired5_10ForIspol_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.NewRequests" FunctionImportName="NewRequests">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.NewRequests_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestSubjectName" ColumnName="RequestSubjectName" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.OpenRequests" FunctionImportName="OpenRequests">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.OpenRequests_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestSubjectName" ColumnName="RequestSubjectName" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+          <ScalarProperty Name="DaysToSolveForIspol" ColumnName="DaysToSolveForIspol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.OpenRetweetRequests" FunctionImportName="OpenRetweetRequests">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.OpenRetweetRequests_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestSubjectName" ColumnName="RequestSubjectName" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="ReadDate" ColumnName="ReadDate" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="AnswerComment" ColumnName="AnswerComment" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.ReqStatistic" FunctionImportName="ReqStatistic">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.ReqStatistic_Result">
+          <ScalarProperty Name="soon1" ColumnName="soon1" />
+          <ScalarProperty Name="soon1_3" ColumnName="soon1_3" />
+          <ScalarProperty Name="soon3_5" ColumnName="soon3_5" />
+          <ScalarProperty Name="totalExpired" ColumnName="totalExpired" />
+          <ScalarProperty Name="expired1_3" ColumnName="expired1_3" />
+          <ScalarProperty Name="expired3_5" ColumnName="expired3_5" />
+          <ScalarProperty Name="expired5_10" ColumnName="expired5_10" />
+          <ScalarProperty Name="expired10_" ColumnName="expired10_" />
+          <ScalarProperty Name="soon1forispol" ColumnName="soon1forispol" />
+          <ScalarProperty Name="soon2forispol" ColumnName="soon2forispol" />
+          <ScalarProperty Name="soon3forispol" ColumnName="soon3forispol" />
+          <ScalarProperty Name="totalExpiredforispol" ColumnName="totalExpiredforispol" />
+          <ScalarProperty Name="expired1_3forispol" ColumnName="expired1_3forispol" />
+          <ScalarProperty Name="expired3_5forispol" ColumnName="expired3_5forispol" />
+          <ScalarProperty Name="expired5_10forispol" ColumnName="expired5_10forispol" />
+          <ScalarProperty Name="expired10_forispol" ColumnName="expired10_forispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.ReqStatUser" FunctionImportName="ReqStatUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.ReqStatUser_Result">
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="totalmonth" ColumnName="totalmonth" />
+          <ScalarProperty Name="in" ColumnName="in" />
+          <ScalarProperty Name="inmonth" ColumnName="inmonth" />
+          <ScalarProperty Name="inprocent" ColumnName="inprocent" />
+          <ScalarProperty Name="out" ColumnName="out" />
+          <ScalarProperty Name="outmonth" ColumnName="outmonth" />
+          <ScalarProperty Name="outprocent" ColumnName="outprocent" />
+          <ScalarProperty Name="closed" ColumnName="closed" />
+          <ScalarProperty Name="closedmonth" ColumnName="closedmonth" />
+          <ScalarProperty Name="closedprocent" ColumnName="closedprocent" />
+          <ScalarProperty Name="soon1" ColumnName="soon1" />
+          <ScalarProperty Name="soon1_3" ColumnName="soon1_3" />
+          <ScalarProperty Name="soon3_5" ColumnName="soon3_5" />
+          <ScalarProperty Name="totalExpired" ColumnName="totalExpired" />
+          <ScalarProperty Name="expired1_3" ColumnName="expired1_3" />
+          <ScalarProperty Name="expired3_5" ColumnName="expired3_5" />
+          <ScalarProperty Name="expired5_10" ColumnName="expired5_10" />
+          <ScalarProperty Name="expired10_" ColumnName="expired10_" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.RetweetRequests" FunctionImportName="RetweetRequests">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.RetweetRequests_Result">
+          <ScalarProperty Name="AnswerId" ColumnName="AnswerId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ReadDate" ColumnName="ReadDate" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserReadDate" ColumnName="UserReadDate" />
+          <ScalarProperty Name="AnswerComment" ColumnName="AnswerComment" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.Soon1" FunctionImportName="Soon1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.Soon1_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.Soon1_3" FunctionImportName="Soon1_3">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.Soon1_3_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.Soon1ForIspol" FunctionImportName="Soon1ForIspol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.Soon1ForIspol_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.Soon2ForIspol" FunctionImportName="Soon2ForIspol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.Soon2ForIspol_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.Soon3ForIspol" FunctionImportName="Soon3ForIspol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.Soon3ForIspol_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.Soon4_7" FunctionImportName="Soon4_7">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.Soon4_7_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.TotalExpired" FunctionImportName="TotalExpired">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.TotalExpired_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="Хранилище qabulxonaModel.TotalExpiredForIspol" FunctionImportName="TotalExpiredForIspol">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="qabulxonaModel.TotalExpiredForIspol_Result">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RequestSubject" ColumnName="RequestSubject" />
+          <ScalarProperty Name="RequestShortText" ColumnName="RequestShortText" />
+          <ScalarProperty Name="RequestText" ColumnName="RequestText" />
+          <ScalarProperty Name="RequestFile" ColumnName="RequestFile" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="RequestPassword" ColumnName="RequestPassword" />
+          <ScalarProperty Name="RequestStatusId" ColumnName="RequestStatusId" />
+          <ScalarProperty Name="InComeDate" ColumnName="InComeDate" />
+          <ScalarProperty Name="ClosedDate" ColumnName="ClosedDate" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="DaysToSolve" ColumnName="DaysToSolve" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ispol" ColumnName="ispol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

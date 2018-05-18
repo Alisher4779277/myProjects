@@ -1,0 +1,156 @@
+﻿@model IEnumerable<Insurance_car.Models.Insurance>
+@{ 
+
+    
+    Layout = "~/Views/Shared/LAyout_admin.cshtml";
+}
+
+
+
+
+
+
+    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">
+                        <em class="fa fa-home"></em>
+                    </a>
+                </li>
+                <li class="active">Bosh sahifa</li>
+            </ol>
+        </div><!--/.row-->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Bosh sahifa</h1>
+            </div>
+        </div><!--/.row-->
+
+        <div class="panel panel-container">
+            <div class="row">
+                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+                    <div class="panel panel-teal panel-widget border-right">
+                        <div class="row no-padding">
+                            <em class="fa fa-xl fa-comments color-red"></em>
+                            <div class="large">@ViewBag.keganla</div>
+                            <div class="text-muted">Kelib tushganlar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+                    <div class="panel panel-blue panel-widget border-right">
+                        <div class="row no-padding">
+                            <em class="fa fa-xl fa-credit-card color-orange"></em>
+                            <div class="large">@ViewBag.tasdiq</div>
+                            <div class="text-muted">Tasdiqlanganlar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+                    <div class="panel panel-blue panel-widget border-right">
+                        <div class="row no-padding">
+                            <em class="fa fa-xl fa-shopping-cart color-blue"></em>
+                            <div class="large">@ViewBag.beril</div>
+                            <div class="text-muted">Berilganlar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+                    <div class="panel panel-blue panel-widget border-right">
+                        <div class="row no-padding">
+                            <em class="fa fa-xl fa-list color-blue"></em>
+                            <div class="large">@ViewBag.m_soni</div>
+                            <div class="text-muted">Murojatlar soni</div>
+                        </div>
+                    </div>
+                </div>
+             
+            </div><!--/.row-->
+        </div>
+ </div>
+
+<div class="col-md-12">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-10">
+        <div class="panel panel-primary no-border" style="border:0px;">
+            <div class="panel-heading h1" style="margin-bottom:0px;"><p class="h3">Жами эълонлар</p></div>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayName("Ф И О")
+                        </th>
+                  
+                        <th>
+                            @Html.DisplayName("Тел номер")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Дата")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Сумма")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Холати")
+                        </th>
+                       
+
+                    </tr>
+
+                    @foreach (var item in Model.OrderByDescending(x => x.Id))
+                    {
+                        <tr>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Person_Name)
+                            </td>
+
+
+                         
+
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PhonoNumber)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Date)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Summary) sum
+                            </td>
+                          @{
+                              if (item.State_Id == 1)
+                              {
+                                <td>
+                                    Келиб тушган
+                                </td>
+                              }
+                              else if (item.State_Id == 2)
+                              {
+                                <td>
+                                Тасдикланган
+                                </td>
+                              }
+                              else
+                              {
+                                <td>
+                                    Берилган
+                                </td>
+                              }
+
+                        }
+                           
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
